@@ -20,9 +20,12 @@ pip3 install --upgrade pip setuptools wheel
 pip3 install torch --index-url https://download.pytorch.org/whl/cpu
 pip3 install -r requirements.txt --no-deps
 deactivate
+
+
 ### Run server
 python312 app.py
 Running on http://127.0.0.1:7860
+
 
 http://localhost:7860  ← for Gradio
 http://localhost:5000  ← for Flask
