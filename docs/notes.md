@@ -24,9 +24,12 @@ deactivate
 
 ### Run server
 python312 app.py
+python3 app.py
 Running on http://127.0.0.1:7860
 
 
 http://localhost:7860  ← for Gradio
 http://localhost:5000  ← for Flask
 http://localhost:8000  ← for FastAPI
+
+Python: Restart Language Server
