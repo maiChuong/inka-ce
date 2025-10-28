@@ -39,3 +39,7 @@ DerivedData/
 .idea/
 *.log
 *.swp
+
+# python env
+.venv/
+env/
