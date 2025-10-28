@@ -384,7 +384,114 @@ Ensure sliders are touch-friendly and labeled
 
 Consider swipeable icon results and floating action buttons
 
-# 🧩 Part 17 Overview (Lines 1)
-# 🧩 Part 18 Overview (Lines 1)
-# 🧩 Part 19 Overview (Lines 1)
-# 🧩 Part 20 Overview (Lines 1)
+# 🧩 Part 17 Overview (Lines 1718-1811)
+💡 What This Means for Inka-CE
+✅ You Should Keep:
+Canvas and layer separation: Clean modular architecture
+
+Zoom and crop tools: Essential for layout control
+
+Undo/redo and layer reordering: Core to non-destructive editing
+
+⚠️ You Can Improve:
+Modularize logic into canvasManager.js and layerManager.js
+
+Add tooltips and keyboard shortcuts for accessibility
+
+Support drag-and-drop layer reordering
+
+Enable pinch-to-zoom and gesture support for mobile/tablet
+
+📱 Mobile-Friendly Notes:
+Use floating buttons for zoom/crop on small screens
+
+Consider collapsible layer panel or swipeable drawer
+
+Ensure canvas is responsive and supports touch input
+
+# 🧩 Part 18 Overview (Lines 1814-1842)
+💡 What This Means for Inka-CE
+✅ You Should Keep:
+Modular API toggles: Supports multiple AI backends
+
+Heartbeat check: Prevents failed requests and improves UX
+
+Collapsible panel: Keeps UI clean and focused
+
+⚠️ You Can Improve:
+Add tooltips or status indicators for clarity
+
+Modularize logic into apiBridge.js and heartbeatMonitor.js
+
+Hide panel by default unless AI mode is enabled
+
+Support custom endpoints for advanced users
+
+📱 Mobile-Friendly Notes:
+Use dropdown or segmented toggle for API selection
+
+Collapse heartbeat check into a single status icon
+
+Ensure buttons are touch-friendly and responsive
+
+# 🧩 Part 19 Overview (Lines 1847-2008)
+💡 What This Means for Inka-CE
+✅ You Should Keep:
+Prompt and model configuration: Core to AI-assisted workflows
+
+Modular workflow selection: Supports extensibility and user preference
+
+Advanced rendering controls: Enables professional-grade output
+
+⚠️ You Can Improve:
+Group controls visually for better UX
+
+Modularize logic into promptManager.js, modelSelector.js, and workflowRouter.js
+
+Hide advanced sections by default for beginner-friendly UI
+
+Add tooltips and presets for accessibility and speed
+
+📱 Mobile-Friendly Notes:
+Use collapsible panels and tabs for dense controls
+
+Ensure sliders and dropdowns are touch-friendly
+
+
+
+# 🧩 Part 20 Overview (Lines 2014-2130)
+💡 What This Means for Inka-CE
+✅ You Should Keep:
+Modular script structure: Easy to maintain and extend
+
+Third-party libraries: Provide robust functionality and performance
+
+Bottom drawer and toast system: Enhance UX and feedback
+
+⚠️ You Can Improve:
+Lazy-load non-critical scripts for faster startup
+
+Group scripts by domain in folders like core/, ui/, ai/, layer/
+
+Document dependencies in a manifest or README
+
+Use ES modules for better bundling and tree-shaking
+
+📱 Mobile-Friendly Notes:
+Bottom drawer is perfect for mobile previews
+
+Toasts should auto-dismiss and be touch-friendly
+
+Use deferred loading and responsive layout for performance
+
+
+# 🧩 Part 21 Overview (Lines 2130-2277)
+Final Takeaways for Inka-CE
+Feature	Strategy
+Modular Sidebar Tools	Organize by domain: text, bubble, tone, effect
+AI Workflows	Optional, gated, extensible
+Font & Icon Support	Local storage + SVG rendering
+Compression & PWA	Fast, offline-ready
+Responsive UI	Auto-resizing, toast feedback, bottom drawer
+Multilingual UX	i18next + flag-based switching
+Performance	Deferred loading, LZ4, localforage
