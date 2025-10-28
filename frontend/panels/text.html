@@ -1,0 +1,44 @@
+<div class="panel" id="textPanel">
+  <div class="area-header">Text Tool</div>
+
+  <!-- Text Input -->
+  <label for="textInput">Text:</label>
+  <textarea id="textInput" rows="3" placeholder="Enter your manga dialogue..."></textarea>
+
+  <!-- Font Selection -->
+  <label for="fontSelect">Font:</label>
+  <select id="fontSelect">
+    <option value="Inter">Inter</option>
+    <option value="Roboto">Roboto</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+    <option value="Osaka">Osaka</option>
+    <option value="Custom">Upload Custom Font</option>
+  </select>
+
+  <!-- Font Size -->
+  <label for="fontSize">Size:</label>
+  <input type="number" id="fontSize" min="8" max="72" value="24" />
+
+  <!-- Alignment -->
+  <label>Alignment:</label>
+  <div class="flex">
+    <button id="alignLeft"><i class="fas fa-align-left"></i></button>
+    <button id="alignCenter"><i class="fas fa-align-center"></i></button>
+    <button id="alignRight"><i class="fas fa-align-right"></i></button>
+  </div>
+
+  <!-- Effects -->
+  <label>Effects:</label>
+  <div class="flex scroll-x">
+    <button class="text-effect-btn" data-effect="shadow">Shadow</button>
+    <button class="text-effect-btn" data-effect="outline">Outline</button>
+    <button class="text-effect-btn" data-effect="thrill">Thrill</button>
+    <button class="text-effect-btn" data-effect="wild">Wild</button>
+    <button class="text-effect-btn" data-effect="zebra">Zebra</button>
+  </div>
+
+  <!-- Add Text Button -->
+  <button id="addTextBtn" style="margin-top: 1em;">
+    <i class="fas fa-plus"></i> Add to Canvas
+  </button>
+</div>

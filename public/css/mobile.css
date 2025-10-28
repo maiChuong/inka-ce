@@ -1,0 +1,117 @@
+/* ===============================
+   Inka-CE Mobile Stylesheet
+   =============================== */
+
+/* Hide sidebars on small screens */
+@media screen and (max-width: 768px) {
+  .sidebar,
+  #layer-panel {
+    display: none !important;
+  }
+
+  .canvas-container {
+    margin: 0;
+    padding: 0.5em;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panel {
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+
+  .area-header {
+    font-size: 1rem;
+    padding: 0.5em 0;
+  }
+
+  /* Bottom drawer becomes primary navigation */
+  .btm-drawer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    background-color: #222;
+    color: #fff;
+    z-index: 100;
+  }
+
+  .btm-drawer-handle {
+    text-align: center;
+    padding: 0.5em;
+    font-weight: bold;
+    background-color: #111;
+    font-size: 0.9rem;
+  }
+
+  .btm-drawer-content {
+    padding: 0.5em;
+    overflow-x: auto;
+    display: flex;
+    gap: 0.8em;
+    align-items: center;
+  }
+
+  /* Touch-friendly buttons */
+  button {
+    font-size: 1rem;
+    padding: 0.8em 1em;
+    min-height: 44px;
+  }
+
+  button i.material-icons {
+    font-size: 1.2rem;
+    margin-right: 0.4em;
+  }
+
+  /* Inputs and sliders */
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 1rem;
+    padding: 0.6em;
+  }
+
+  input[type="range"] {
+    height: 32px;
+  }
+
+  /* Toast container repositioned */
+  #sp-manga-toastContainer {
+    bottom: 0.5em;
+    right: 0.5em;
+    left: 0.5em;
+    width: auto;
+  }
+
+  /* Responsive text */
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  /* Scroll containers */
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scroll-y {
+    overflow-y: auto;
+    max-height: 70vh;
+    -webkit-overflow-scrolling: touch;
+  }
+}

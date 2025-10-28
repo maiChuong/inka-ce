@@ -1,0 +1,32 @@
+<div class="panel" id="promptPanel">
+  <div class="area-header">AI Prompt Generator</div>
+
+  <!-- Prompt Input -->
+  <label for="aiPrompt">Prompt:</label>
+  <textarea id="aiPrompt" rows="3" placeholder="Describe your manga scene..."></textarea>
+
+  <!-- Negative Prompt -->
+  <label for="negativePrompt">Negative Prompt:</label>
+  <textarea id="negativePrompt" rows="2" placeholder="What to avoid (e.g. blur, distortion)..."></textarea>
+
+  <!-- Model Selection -->
+  <label for="modelSelect">Model:</label>
+  <select id="modelSelect">
+    <option value="sd15">Stable Diffusion v1.5</option>
+    <option value="sdxl">SDXL (if available)</option>
+    <option value="custom">Custom Workflow</option>
+  </select>
+
+  <!-- CFG Scale -->
+  <label for="cfgScale">CFG Scale:</label>
+  <input type="range" id="cfgScale" min="1" max="20" value="7" />
+
+  <!-- Seed -->
+  <label for="seedInput">Seed (optional):</label>
+  <input type="number" id="seedInput" placeholder="Random if empty" />
+
+  <!-- Generate Button -->
+  <button id="generateImageBtn" style="margin-top: 1em;">
+    <i class="fas fa-image"></i> Generate Image
+  </button>
+</div>

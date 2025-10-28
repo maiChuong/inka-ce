@@ -1,0 +1,31 @@
+<div class="panel" id="apiPanel">
+  <div class="area-header">API Integration</div>
+
+  <!-- API Endpoint -->
+  <label for="apiEndpoint">Endpoint URL:</label>
+  <input type="text" id="apiEndpoint" placeholder="https://your-api.com/generate" />
+
+  <!-- API Key -->
+  <label for="apiKey">API Key:</label>
+  <input type="text" id="apiKey" placeholder="Enter your API key..." />
+
+  <!-- Request Method -->
+  <label for="apiMethod">Method:</label>
+  <select id="apiMethod">
+    <option value="POST">POST</option>
+    <option value="GET">GET</option>
+  </select>
+
+  <!-- Headers -->
+  <label for="apiHeaders">Headers (JSON):</label>
+  <textarea id="apiHeaders" rows="3" placeholder='{"Authorization": "Bearer ..."}'></textarea>
+
+  <!-- Payload -->
+  <label for="apiPayload">Payload (JSON):</label>
+  <textarea id="apiPayload" rows="4" placeholder='{"prompt": "manga scene", "steps": 30}'></textarea>
+
+  <!-- Send Request -->
+  <button id="sendApiRequestBtn" style="margin-top: 1em;">
+    <i class="fas fa-paper-plane"></i> Send Request
+  </button>
+</div>

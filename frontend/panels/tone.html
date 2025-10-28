@@ -1,0 +1,37 @@
+<div class="panel" id="tonePanel">
+  <div class="area-header">Tone Effects</div>
+
+  <!-- Tone Type Selection -->
+  <label for="toneType">Select Tone:</label>
+  <select id="toneType">
+    <option value="speedline">Speedline</option>
+    <option value="focusline">Focusline</option>
+    <option value="noise">Noise</option>
+    <option value="snow">Snow</option>
+    <option value="c2bw">Black & White Contrast</option>
+    <option value="c2c">Color to Contrast</option>
+  </select>
+
+  <!-- Intensity Control -->
+  <label for="toneIntensity">Intensity:</label>
+  <input type="range" id="toneIntensity" min="0" max="100" value="50" />
+
+  <!-- Blend Mode -->
+  <label for="toneBlend">Blend Mode:</label>
+  <select id="toneBlend">
+    <option value="multiply">Multiply</option>
+    <option value="overlay">Overlay</option>
+    <option value="screen">Screen</option>
+    <option value="soft-light">Soft Light</option>
+  </select>
+
+  <!-- Preview Area -->
+  <div id="tonePreview" class="rounded shadow" style="margin-top: 1em; height: 120px; background-color: #eee;">
+    <!-- Tone preview will be rendered here -->
+  </div>
+
+  <!-- Apply Tone Button -->
+  <button id="applyToneBtn" style="margin-top: 1em;">
+    <i class="fas fa-brush"></i> Apply Tone
+  </button>
+</div>

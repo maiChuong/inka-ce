@@ -1,0 +1,30 @@
+<div class="panel" id="effectPanel">
+  <div class="area-header">Visual Effects</div>
+
+  <!-- Effect Type Selection -->
+  <label for="effectType">Select Effect:</label>
+  <select id="effectType">
+    <option value="blur">Blur</option>
+    <option value="glow">Glow</option>
+    <option value="contrast">Contrast</option>
+    <option value="grayscale">Grayscale</option>
+    <option value="invert">Invert</option>
+    <option value="pixelate">Pixelate</option>
+    <option value="tone-c2bw">C2BW Tone</option>
+    <option value="tone-c2c">C2C Tone</option>
+  </select>
+
+  <!-- Intensity Control -->
+  <label for="effectIntensity">Intensity:</label>
+  <input type="range" id="effectIntensity" min="0" max="100" value="50" />
+
+  <!-- Preview Area -->
+  <div id="effectPreview" class="rounded shadow" style="margin-top: 1em; height: 120px; background-color: #eee;">
+    <!-- Effect preview will be rendered here -->
+  </div>
+
+  <!-- Apply Effect Button -->
+  <button id="applyEffectBtn" style="margin-top: 1em;">
+    <i class="fas fa-wand-magic-sparkles"></i> Apply Effect
+  </button>
+</div>

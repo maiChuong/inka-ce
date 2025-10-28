@@ -1,0 +1,45 @@
+<div class="panel" id="aiPanel">
+  <div class="area-header">AI Workflow Settings</div>
+
+  <!-- Backend Selection -->
+  <label for="backendSelect">Backend:</label>
+  <select id="backendSelect">
+    <option value="diffusers">Diffusers (local)</option>
+    <option value="sd-webui">Stable Diffusion WebUI</option>
+    <option value="remote-api">Remote API</option>
+  </select>
+
+  <!-- Image Dimensions -->
+  <label for="imageWidth">Width (px):</label>
+  <input type="number" id="imageWidth" min="256" max="2048" value="768" />
+
+  <label for="imageHeight">Height (px):</label>
+  <input type="number" id="imageHeight" min="256" max="2048" value="768" />
+
+  <!-- Sampling Method -->
+  <label for="samplerSelect">Sampler:</label>
+  <select id="samplerSelect">
+    <option value="euler">Euler</option>
+    <option value="euler_a">Euler A</option>
+    <option value="ddim">DDIM</option>
+    <option value="dpm++">DPM++</option>
+    <option value="lcm">LCM</option>
+  </select>
+
+  <!-- Steps -->
+  <label for="samplingSteps">Steps:</label>
+  <input type="range" id="samplingSteps" min="10" max="100" value="30" />
+
+  <!-- Batch Size -->
+  <label for="batchSize">Batch Size:</label>
+  <input type="number" id="batchSize" min="1" max="8" value="1" />
+
+  <!-- Advanced Toggle -->
+  <label for="enableAdvanced">Advanced Mode:</label>
+  <input type="checkbox" id="enableAdvanced" />
+
+  <!-- Apply Settings Button -->
+  <button id="applyAISettingsBtn" style="margin-top: 1em;">
+    <i class="fas fa-cogs"></i> Apply Settings
+  </button>
+</div>

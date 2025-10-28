@@ -1,0 +1,40 @@
+<div class="panel" id="bubblePanel">
+  <div class="area-header">Speech Bubble Tool</div>
+
+  <!-- Bubble Text -->
+  <label for="bubbleText">Text:</label>
+  <textarea id="bubbleText" rows="3" placeholder="Enter bubble dialogue..."></textarea>
+
+  <!-- Bubble Shape -->
+  <label for="bubbleShape">Shape:</label>
+  <select id="bubbleShape">
+    <option value="rounded">Rounded</option>
+    <option value="cloud">Cloud</option>
+    <option value="spiky">Spiky</option>
+    <option value="square">Square</option>
+    <option value="freehand">Freehand</option>
+  </select>
+
+  <!-- Tail Direction -->
+  <label for="tailDirection">Tail Direction:</label>
+  <select id="tailDirection">
+    <option value="left">Left</option>
+    <option value="right">Right</option>
+    <option value="top">Top</option>
+    <option value="bottom">Bottom</option>
+    <option value="none">None</option>
+  </select>
+
+  <!-- Padding -->
+  <label for="bubblePadding">Padding:</label>
+  <input type="range" id="bubblePadding" min="0" max="40" value="12" />
+
+  <!-- Stroke Width -->
+  <label for="bubbleStroke">Stroke Width:</label>
+  <input type="range" id="bubbleStroke" min="1" max="10" value="2" />
+
+  <!-- Add Bubble Button -->
+  <button id="addBubbleBtn" style="margin-top: 1em;">
+    <i class="fas fa-plus"></i> Add Bubble
+  </button>
+</div>

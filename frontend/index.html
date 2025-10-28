@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inka-CE Manga Editor</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../public/css/base.css" />
+  <link rel="stylesheet" href="../public/css/desktop.css" media="screen and (min-width: 769px)" />
+  <link rel="stylesheet" href="../public/css/mobile.css" media="screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="../public/css/themes.css" />
+  <link rel="stylesheet" href="../public/css/toast.css" />
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="../public/third/font-awesome/all.min.css" />
+  <link rel="stylesheet" href="../public/third/intro/introjs.min.css" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="area-header">Panels</div>
+    <div id="sidebar-panels">
+      <!-- Panels will be injected here -->
+    </div>
+  </aside>
+
+  <!-- Canvas Area -->
+  <main class="canvas-container">
+    <div id="canvas-wrapper">
+      <canvas id="mangaCanvas"></canvas>
+    </div>
+    <div id="canvas-controls">
+      <!-- Zoom, crop, layer buttons -->
+    </div>
+  </main>
+
+  <!-- Layer Panel -->
+  <aside id="layer-panel">
+    <div class="area-header">Layers</div>
+    <div id="layer-controls">
+      <!-- Layer buttons and preview -->
+    </div>
+  </aside>
+
+  <!-- Bottom Drawer -->
+  <div id="btm-drawer" class="btm-drawer btm-closed">
+    <div id="btm-drawer-handle" class="btm-drawer-handle neon-text">OPEN</div>
+    <div class="btm-drawer-content">
+      <div id="btm-image-container"></div>
+      <button id="btm-scroll-left" class="btm-scroll-btn">&lt;</button>
+      <button id="btm-scroll-right" class="btm-scroll-btn">&gt;</button>
+    </div>
+  </div>
+
+  <!-- Toast Notifications -->
+  <div id="sp-manga-toastContainer" class="position-fixed bottom-0 end-0 p-3"></div>
+
+  <!-- Scripts -->
+  <script src="../public/third/intro/intro.min.js"></script>
+  <script src="../public/third/jscolor/jscolor.min.js"></script>
+  <script src="../public/js/ui/ui-init.js"></script>
+  <script src="../public/js/core/canvas.js"></script>
+  <script src="../public/js/core/layers.js"></script>
+  <script src="../public/js/sidebar/text.js"></script>
+  <script src="../public/js/sidebar/bubble.js"></script>
+  <script src="../public/js/sidebar/tone.js"></script>
+  <script src="../public/js/sidebar/effect.js"></script>
+  <script src="../public/js/ai/prompt.js"></script>
+  <script src="../public/js/ai/model.js"></script>
+  <script src="../public/js/ui/toast.js"></script>
+</body>
+</html>

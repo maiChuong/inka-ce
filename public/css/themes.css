@@ -1,0 +1,93 @@
+/* ===============================
+   Inka-CE Theme Stylesheet
+   Optional visual enhancements
+   =============================== */
+
+/* === Light Theme === */
+.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --panel-bg: #f5f5f5;
+  --accent-color: #007bff;
+  --border-color: #ddd;
+}
+
+/* === Dark Theme === */
+.theme-dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --panel-bg: #2a2a2a;
+  --accent-color: #0ff;
+  --border-color: #444;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  border: 1px solid var(--border-color);
+}
+
+button {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* === Manga Tone Overlays === */
+.tone-speedline {
+  background-image: url('../images/tone-speedline.png');
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.tone-focusline {
+  background-image: url('../images/tone-focusline.png');
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+.tone-noise {
+  background-image: url('../images/tone-noise.png');
+  background-size: cover;
+  mix-blend-mode: overlay;
+}
+
+/* === Speech Bubble Styles === */
+.bubble-rounded {
+  border-radius: 16px;
+  padding: 1em;
+  background-color: #fff;
+  border: 2px solid #333;
+}
+
+.bubble-cloud {
+  background: radial-gradient(circle at top left, #fff 60%, #ccc 100%);
+  border-radius: 50%;
+  padding: 1em;
+  border: 2px dashed #333;
+}
+
+/* === Brush Preview Styles === */
+.brush-preview {
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  margin: 0.5em;
+}
+
+/* === Panel Highlight === */
+.panel-highlight {
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* === Neon Accent === */
+.neon-accent {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color);
+}

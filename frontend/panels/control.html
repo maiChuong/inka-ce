@@ -1,0 +1,39 @@
+<div class="panel" id="controlPanel">
+  <div class="area-header">Transform Controls</div>
+
+  <!-- Rotation -->
+  <label for="rotateAngle">Rotate (°):</label>
+  <input type="range" id="rotateAngle" min="0" max="360" value="0" />
+  <button id="applyRotateBtn">
+    <i class="fas fa-redo-alt"></i> Apply Rotation
+  </button>
+
+  <!-- Flip -->
+  <label>Flip:</label>
+  <div class="flex">
+    <button id="flipHorizontalBtn">
+      <i class="fas fa-arrows-alt-h"></i> Horizontal
+    </button>
+    <button id="flipVerticalBtn">
+      <i class="fas fa-arrows-alt-v"></i> Vertical
+    </button>
+  </div>
+
+  <!-- Scale -->
+  <label for="scaleFactor">Scale (%):</label>
+  <input type="range" id="scaleFactor" min="10" max="200" value="100" />
+  <button id="applyScaleBtn">
+    <i class="fas fa-expand-alt"></i> Apply Scale
+  </button>
+
+  <!-- Crop -->
+  <label>Crop:</label>
+  <div class="flex-column" style="gap: 0.5em;">
+    <button id="cropSquareBtn">
+      <i class="fas fa-crop-alt"></i> Square Crop
+    </button>
+    <button id="cropFreeBtn">
+      <i class="fas fa-crop"></i> Freehand Crop
+    </button>
+  </div>
+</div>
