@@ -41,5 +41,5 @@ DerivedData/
 *.swp
 
 # python env
-.venv/
+venv/
 env/
