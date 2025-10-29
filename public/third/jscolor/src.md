@@ -1,0 +1,1 @@
+https://github.com/EastDesire/jscolor/blob/master/jscolor.js
