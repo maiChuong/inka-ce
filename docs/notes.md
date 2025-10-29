@@ -33,3 +33,5 @@ http://localhost:5000  ← for Flask
 http://localhost:8000  ← for FastAPI
 
 Python: Restart Language Server
+
+rsync -av --exclude 'venv/' --exclude '.git/' /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka-ce/ /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka/
