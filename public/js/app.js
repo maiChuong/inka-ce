@@ -1,13 +1,14 @@
 // public/js/app.js
 
 // 🧠 AI Modules
-import { initModel } from './ai/model.js';
-import { initPromptAI } from './ai/prompt.js';
+// import { initModel } from './ai/model.js';
+// import { initPromptAI } from './ai/prompt.js';
+
 
 // 🎛️ Control Panels
-import { initAIPanel } from './controls/ai-panel.js';
-import { initAPIPanel } from './controls/api-panel.js';
-import { initPromptPanel } from './controls/prompt.js';
+// import { initAIPanel } from './controls/ai-panel.js';
+// import { initAPIPanel } from './controls/api-panel.js';
+// import { initPromptPanel } from './controls/prompt.js';
 
 // 🎨 Core Canvas
 import { initCanvas } from './core/canvas.js';
@@ -27,13 +28,13 @@ import { initUI } from './ui/ui-init.js';
 function initApp() {
   try {
     // Initialize AI
-    initModel();
-    initPromptAI();
+    // initModel();
+    // initPromptAI();
 
     // Initialize Controls
-    initAIPanel();
-    initAPIPanel();
-    initPromptPanel();
+    // initAIPanel();
+    // initAPIPanel();
+    // initPromptPanel();
 
     // Initialize Canvas Core
     initCanvas();
