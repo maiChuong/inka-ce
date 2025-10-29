@@ -35,3 +35,12 @@ http://localhost:8000  ← for FastAPI
 Python: Restart Language Server
 
 rsync -av --exclude 'venv/' --exclude '.git/' /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka-ce/ /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka/
+
+rsync -av --exclude 'venv/' /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka-ce/ /Volumes/CMPRO128GB/AGI_projects/maiChuong_github/inka-ce-bak/
+
+rm -rf venv/
+rm -f app.py requirements.txt
+find . -name "*.py" -delete
+find . -name "*.ipynb" -delete
+
+python3 -m http.server

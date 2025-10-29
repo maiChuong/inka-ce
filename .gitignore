@@ -41,5 +41,8 @@ DerivedData/
 *.swp
 
 # python env
-venv/
 env/
+venv/
+__pycache__/
+*.pyc
+*.ipynb
