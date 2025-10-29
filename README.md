@@ -15,4 +15,4 @@ Inka-CE is a modular, mobile-first manga editor designed for Hugging Face Spaces
 3. Customize frontend in `frontend/` and assets in `public/`
 
 ## License
-MIT
+Apache-2.0
