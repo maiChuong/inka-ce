@@ -1,5 +1,6 @@
 // Toast Notification System for Inka-CE
-window.showToast = function (message, type = "info", duration = 4000) {
+
+export function showToast(message, type = "info", duration = 4000) {
   const container = document.getElementById("sp-manga-toastContainer");
   if (!container) return;
 
@@ -25,4 +26,7 @@ window.showToast = function (message, type = "info", duration = 4000) {
     toast.classList.add("fade-out");
     setTimeout(() => toast.remove(), 500);
   }, duration);
-};
+}
+
+// Optional: expose globally if needed by legacy scripts
+window.showToast = showToast;

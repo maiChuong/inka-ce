@@ -1,5 +1,6 @@
 // UI Initialization for Inka-CE
-document.addEventListener("DOMContentLoaded", () => {
+
+export function initUI() {
   // === Theme Toggle ===
   const toggleThemeBtn = document.getElementById("toggleThemeBtn");
   toggleThemeBtn?.addEventListener("click", () => {
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // === Toast Initialization ===
   window.showToast = function (message, type = "info") {
     const container = document.getElementById("sp-manga-toastContainer");
+    if (!container) return;
     const toast = document.createElement("div");
     toast.className = `toast toast-${type}`;
     toast.textContent = message;
@@ -58,4 +60,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // === Default Panel ===
   const defaultPanel = document.getElementById("text-panel");
   defaultPanel?.classList.remove("hidden");
-});
+
+  // === Topbar Dropdown Toggle ===
+  const menuButtons = document.querySelectorAll(".menu-button");
+  menuButtons.forEach(button => {
+    button.addEventListener("click", e => {
+      e.stopPropagation();
+      const parentItem = button.closest(".menu-item");
+      const isOpen = parentItem.classList.contains("open");
+
+      // Close all other dropdowns
+      document.querySelectorAll(".menu-item.open").forEach(item => {
+        item.classList.remove("open");
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        parentItem.classList.add("open");
+      }
+    });
+  });
+
+  // === Close dropdowns when clicking outside ===
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".menu-item")) {
+      document.querySelectorAll(".menu-item.open").forEach(item => {
+        item.classList.remove("open");
+      });
+    }
+  });
+}

@@ -1,5 +1,6 @@
 // Visual Effects Logic for Inka-CE
-window.addEventListener("DOMContentLoaded", () => {
+
+export function initEffect() {
   const canvas = window.canvas;
   if (!canvas) return;
 
@@ -12,7 +13,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const intensity = parseInt(effectIntensity.value) || 50;
 
     const obj = canvas.getActiveObject();
-    if (!obj || !obj.filters) return showToast("Select an object to apply effect.", "warning");
+    if (!obj || !obj.filters) {
+      showToast("Select an object to apply effect.", "warning");
+      return;
+    }
 
     obj.filters = [];
 
@@ -47,11 +51,12 @@ window.addEventListener("DOMContentLoaded", () => {
         obj.filters.push(new fabric.Image.filters.Sepia());
         break;
       default:
-        return showToast("Unknown effect type.", "error");
+        showToast("Unknown effect type.", "error");
+        return;
     }
 
     obj.applyFilters();
     canvas.requestRenderAll();
     showToast(`Applied ${type} effect.`, "success");
   });
-});
+}

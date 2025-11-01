@@ -1,7 +1,8 @@
 // Layer Management for Inka-CE
+
 let layerCounter = 0;
 
-window.addEventListener("DOMContentLoaded", () => {
+export function initLayers() {
   const canvas = window.canvas;
   const layerList = document.getElementById("layer-list");
 
@@ -76,4 +77,4 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+}

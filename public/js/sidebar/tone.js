@@ -1,5 +1,6 @@
 // Tone Effect Logic for Inka-CE
-window.addEventListener("DOMContentLoaded", () => {
+
+export function initTone() {
   const canvas = window.canvas;
   if (!canvas) return;
 
@@ -34,4 +35,4 @@ window.addEventListener("DOMContentLoaded", () => {
       showToast(`Applied ${type} tone.`, "success");
     }, { crossOrigin: "anonymous" });
   });
-});
+}

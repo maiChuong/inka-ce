@@ -22,7 +22,7 @@ import { initText } from './sidebar/text.js';
 import { initTone } from './sidebar/tone.js';
 
 // 🖼️ UI Elements
-import { initToast } from './ui/toast.js';
+import { showToast } from './ui/toast.js';
 import { initUI } from './ui/ui-init.js';
 
 function initApp() {
@@ -48,7 +48,7 @@ function initApp() {
     initTone();
 
     // Initialize UI
-    initToast();
+    showToast();
     initUI();
   } catch (e) {
     console.error('[Init] App initialization failed:', e);

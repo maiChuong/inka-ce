@@ -1,8 +1,9 @@
 // Canvas Core Logic for Inka-CE
+
 let canvas;
 let zoomLevel = 1;
 
-window.addEventListener("DOMContentLoaded", () => {
+export function initCanvas() {
   const canvasEl = document.getElementById("mangaCanvas");
   if (!canvasEl) return;
 
@@ -79,4 +80,7 @@ window.addEventListener("DOMContentLoaded", () => {
       showToast("Project loaded from local storage.", "info");
     });
   }
-});
+
+  // Make canvas globally accessible if needed
+  window.canvas = canvas;
+}

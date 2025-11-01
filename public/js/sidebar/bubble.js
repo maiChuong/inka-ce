@@ -1,5 +1,6 @@
 // Speech Bubble Tool for Inka-CE
-window.addEventListener("DOMContentLoaded", () => {
+
+export function initBubble() {
   const canvas = window.canvas;
   if (!canvas) return;
 
@@ -19,7 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const padding = parseInt(bubblePadding.value) || 12;
     const strokeWidth = parseInt(bubbleStroke.value) || 2;
 
-    // Create text box
     const textbox = new fabric.Textbox(text, {
       fontSize: 20,
       fill: "#000",
@@ -28,7 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
       editable: true
     });
 
-    // Create bubble background
     const bubble = new fabric.Rect({
       width: textbox.width + padding * 2,
       height: textbox.height + padding * 2,
@@ -39,14 +38,12 @@ window.addEventListener("DOMContentLoaded", () => {
       ry: shape === "rounded" ? 16 : shape === "cloud" ? 32 : 0
     });
 
-    // Group bubble + text
     const group = new fabric.Group([bubble, textbox], {
       left: 100,
       top: 100,
       name: `Bubble ${Date.now()}`
     });
 
-    // Add tail if needed
     if (tail !== "none") {
       const tailShape = new fabric.Triangle({
         width: 20,
@@ -68,4 +65,4 @@ window.addEventListener("DOMContentLoaded", () => {
     canvas.requestRenderAll();
     showToast("Speech bubble added.", "success");
   });
-});
+}

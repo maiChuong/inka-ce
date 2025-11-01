@@ -5,10 +5,10 @@
 /* Sidebar layout */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 36px; /* Push below topbar */
   left: 0;
   width: 280px;
-  height: 100vh;
+  height: calc(100vh - 36px); /* Adjust height */
   background-color: #ffffff;
   border-right: 1px solid #ddd;
   overflow-y: auto;
@@ -38,10 +38,10 @@
 /* Layer panel */
 #layer-panel {
   position: fixed;
-  top: 0;
+  top: 36px; /* Push below topbar */
   right: 0;
   width: 280px;
-  height: 100vh;
+  height: calc(100vh - 36px); /* Adjust height */
   background-color: #f5f5f5;
   border-left: 1px solid #ddd;
   overflow-y: auto;

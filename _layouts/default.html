@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  {% if site.github %}
+    <base href="https://maichuong.github.io/inka-ce/public/" />
+  {% else %}
+    <base href="/public/" />
+  {% endif %}
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 769px)" />
+  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/toast.css" />
+  <link rel="stylesheet" href="css/topbar.css" />
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
+
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="third/font-awesome/all.min.css" />
+  <link rel="stylesheet" href="third/intro/introjs.min.css" />
+</head>
+<body>
+  {{ content }}
+
+  <!-- Scripts -->
+  <script src="third/fabric/fabric.min_PlusEraser.js"></script>
+  <script src="third/intro/intro.min.js"></script>
+  <script src="third/jscolor/jscolor.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

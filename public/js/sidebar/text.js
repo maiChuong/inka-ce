@@ -1,5 +1,6 @@
 // Text Tool Logic for Inka-CE
-window.addEventListener("DOMContentLoaded", () => {
+
+export function initText() {
   const canvas = window.canvas;
   if (!canvas) return;
 
@@ -100,4 +101,4 @@ window.addEventListener("DOMContentLoaded", () => {
         obj.set("stroke", null);
     }
   }
-});
+}

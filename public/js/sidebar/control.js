@@ -1,5 +1,6 @@
 // Transform Controls for Inka-CE
-window.addEventListener("DOMContentLoaded", () => {
+
+export function initControlSidebar() {
   const canvas = window.canvas;
   if (!canvas) return;
 
@@ -78,4 +79,4 @@ window.addEventListener("DOMContentLoaded", () => {
   document.getElementById("cropFreeBtn")?.addEventListener("click", () => {
     showToast("Freehand crop not implemented yet.", "warning");
   });
-});
+}
