@@ -69,12 +69,10 @@ export function initUI() {
       const parentItem = button.closest(".menu-item");
       const isOpen = parentItem.classList.contains("open");
 
-      // Close all other dropdowns
       document.querySelectorAll(".menu-item.open").forEach(item => {
         item.classList.remove("open");
       });
 
-      // Toggle current
       if (!isOpen) {
         parentItem.classList.add("open");
       }
@@ -84,9 +82,7 @@ export function initUI() {
   // === Close dropdowns when clicking outside ===
   document.addEventListener("click", e => {
     if (!e.target.closest(".menu-item")) {
-      document.querySelectorAll(".menu-item.open").forEach(item => {
-        item.classList.remove("open");
-      });
+      document.querySelectorAll(".menu-item.open").forEach(item => item.classList.remove("open"));
     }
   });
 }
