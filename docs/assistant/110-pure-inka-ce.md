@@ -37,7 +37,7 @@ Tone: Screen tone skins
 Properties: control image size, skew.
 
 
-## Bottom Page view
+## Bottom Page view [OPEN]
 Single page
 Multiple page sequence
 
