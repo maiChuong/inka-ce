@@ -1,6 +1,7 @@
+Inka-ee is nextjs Vercel app page
+
 # Foresight of features
 Inka-ce is jekyll Github static page
-Inka-ee is nextjs Vercel app page
 
 ## Topbar menu
 File
@@ -58,8 +59,8 @@ Tooltips
 Hotkey (Shortcut)
 
 
-## Object types
-Polygon frame fixed size: top page sub control panel: add image from layers, zoon-in, zoom-out, hand free drag image inside polygon, flip vertical, flip horizontal, rotate image not polygon, delete image.
+## Object types that shall be listed in the Layers
+Polygon frame with attached sub control panel: add image from layers, zoon-in, zoom-out, hand free drag image inside polygon, flip vertical, flip horizontal, rotate image not polygon, delete image. These image is sublayer of polygon layer
 Image selection: 
 Draw layer
 Text

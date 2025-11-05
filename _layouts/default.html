@@ -5,31 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title | default: site.title }}</title>
   {% if site.github %}
-    <base href="https://maichuong.github.io/inka-ce/public/" />
+    <base href="https://maichuong.github.io/inka-ce/" />
   {% else %}
-    <base href="/public/" />
+    <base href="/" />
   {% endif %}
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 769px)" />
-  <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)" />
-  <link rel="stylesheet" href="css/themes.css" />
-  <link rel="stylesheet" href="css/toast.css" />
-  <link rel="stylesheet" href="css/topbar.css" />
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon" />
+  <link rel="stylesheet" href="public/css/base.css" />
+  <link rel="stylesheet" href="public/css/desktop.css" media="screen and (min-width: 769px)" />
+  <link rel="stylesheet" href="public/css/mobile.css" media="screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="public/css/themes.css" />
+  <link rel="stylesheet" href="public/css/toast.css" />
+  <link rel="stylesheet" href="public/css/topbar.css" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
   <!-- External Libraries -->
-  <link rel="stylesheet" href="third/font-awesome/all.min.css" />
-  <link rel="stylesheet" href="third/intro/introjs.min.css" />
+  <link rel="stylesheet" href="public/third/font-awesome/all.min.css" />
+  <link rel="stylesheet" href="public/third/intro/introjs.min.css" />
 </head>
 <body>
   {{ content }}
 
   <!-- Scripts -->
-  <script src="third/fabric/fabric.min_PlusEraser.js"></script>
-  <script src="third/intro/intro.min.js"></script>
-  <script src="third/jscolor/jscolor.min.js"></script>
-  <script type="module" src="js/app.js"></script>
+  <script src="public/third/fabric/fabric.min_PlusEraser.js"></script>
+  <script src="public/third/intro/intro.min.js"></script>
+  <script src="public/third/jscolor/jscolor.min.js"></script>
+  <script type="module" src="public/js/app.js"></script>
 </body>
 </html>
