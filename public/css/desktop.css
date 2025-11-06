@@ -84,7 +84,6 @@
   display: block;
 }
 
-
 /* === Canvas Container Layout === */
 .canvas-container {
   position: fixed;
@@ -119,21 +118,26 @@
   background-color: #f0f0f0;
 }
 
-/* === Canvas Wrapper (centered inside viewport) === */
+/* === Canvas Wrapper (auto-sized to canvas) === */
 #canvas-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: inline-block;
+  position: relative;
+  margin: 48px 0 0 48px; /* offset for ruler bars */
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 3;
 }
 
+/* === Canvas Element === */
+#mangaCanvas {
+  display: block;
+  background-color: #fff;
+}
+
 /* === Ruler Overlay === */
-.show-ruler::before,
-.show-ruler::after {
+.canvas-viewport.show-ruler::before,
+.canvas-viewport.show-ruler::after {
   content: "";
   position: absolute;
   background-color: #eee;
@@ -141,30 +145,29 @@
   pointer-events: none;
 }
 
-.show-ruler::before {
+.canvas-viewport.show-ruler::before {
   top: 0;
-  left: 0;
+  left: 48px;
   height: 24px;
-  width: 100%;
+  width: calc(100% - 48px);
   border-bottom: 1px solid #ccc;
 }
 
-.show-ruler::after {
-  top: 0;
+.canvas-viewport.show-ruler::after {
+  top: 24px;
   left: 0;
   width: 24px;
-  height: 100%;
+  height: calc(100% - 24px);
   border-right: 1px solid #ccc;
 }
 
-
-/* Layer panel */
+/* === Layer Panel === */
 #layer-panel {
   position: fixed;
-  top: 36px; /* Push below topbar */
+  top: 36px;
   right: 0;
   width: 280px;
-  height: calc(100vh - 36px); /* Adjust height */
+  height: calc(100vh - 36px);
   background-color: #f5f5f5;
   border-left: 1px solid #ddd;
   overflow-y: auto;
@@ -172,7 +175,7 @@
   z-index: 100;
 }
 
-/* Control panels */
+/* === Control Panels === */
 .panel {
   margin-bottom: 2em;
   padding: 1em;
@@ -189,7 +192,7 @@
   cursor: pointer;
 }
 
-/* Drawer */
+/* === Drawer Preview === */
 .btm-drawer {
   position: fixed;
   bottom: 0;
@@ -221,13 +224,13 @@
   gap: 1em;
 }
 
-/* Buttons */
+/* === Buttons === */
 button i.material-icons {
   vertical-align: middle;
   margin-right: 0.3em;
 }
 
-/* Toast container */
+/* === Toast Container === */
 #sp-manga-toastContainer {
   position: fixed;
   bottom: 1em;
@@ -235,7 +238,7 @@ button i.material-icons {
   z-index: 999;
 }
 
-/* Scrollbars */
+/* === Scrollbars === */
 ::-webkit-scrollbar {
   width: 8px;
 }
