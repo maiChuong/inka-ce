@@ -8,7 +8,7 @@ export function showToast(message, type = "info", duration = 4000) {
   toast.className = `toast toast-${type}`;
   toast.textContent = message;
 
-  // Optional: add icon
+  // Optional icon
   const icon = document.createElement("span");
   icon.className = "toast-icon";
   icon.innerHTML = {
@@ -28,5 +28,7 @@ export function showToast(message, type = "info", duration = 4000) {
   }, duration);
 }
 
-// Optional: expose globally if needed by legacy scripts
-window.showToast = showToast;
+// Toast system initializer
+export function initToastSystem() {
+  window.showToast = showToast;
+}

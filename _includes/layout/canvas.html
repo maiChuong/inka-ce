@@ -1,22 +1,58 @@
 <section class="canvas-container" id="canvas-area">
-  <!-- Canvas Wrapper -->
-  <div id="canvas-wrapper" class="rounded shadow" style="position: relative; width: 100%; max-width: 960px; height: 80vh;">
-    <canvas id="mangaCanvas" width="960" height="720" style="border: 1px solid #ccc; background-color: #fff;"></canvas>
+  <!-- === Canvas Topbar Controls === -->
+  <div id="canvas-topbar" class="canvas-topbar">
+    <div class="canvas-dimensions">
+      <label for="canvasWidth">W:</label>
+      <input type="number" id="canvasWidth" value="960" min="100" max="2000" />
+      <label for="canvasHeight">H:</label>
+      <input type="number" id="canvasHeight" value="720" min="100" max="2000" />
+      <button id="applyCanvasSizeBtn" title="Apply Size">
+        <i class="fas fa-check"></i>
+      </button>
+    </div>
+
+    <div class="canvas-controls">
+      <button id="toggleRulerBtn" title="Toggle Ruler">
+        <i class="fas fa-ruler"></i> Ruler
+      </button>
+      <button id="zoomInBtn" title="Zoom In">
+        <i class="fas fa-search-plus"></i> Zoom In
+      </button>
+      <button id="zoomOutBtn" title="Zoom Out">
+        <i class="fas fa-search-minus"></i> Zoom Out
+      </button>
+      <button id="resetZoomBtn" title="Reset Zoom">
+        <i class="fas fa-compress"></i> Reset
+      </button>
+      <button id="toggleLayersBtn" title="Toggle Layers">
+        <i class="fas fa-layer-group"></i> Layers
+      </button>
+    </div>
   </div>
 
-  <!-- Canvas Controls -->
-  <div id="canvas-controls" class="flex justify-center" style="margin-top: 1em; gap: 1em;">
-    <button id="zoomInBtn" title="Zoom In">
-      <i class="fas fa-search-plus"></i> Zoom In
-    </button>
-    <button id="zoomOutBtn" title="Zoom Out">
-      <i class="fas fa-search-minus"></i> Zoom Out
-    </button>
-    <button id="resetZoomBtn" title="Reset Zoom">
-      <i class="fas fa-compress"></i> Reset
-    </button>
-    <button id="toggleLayersBtn" title="Toggle Layers">
-      <i class="fas fa-layer-group"></i> Layers
-    </button>
+  <!-- === Scrollable Canvas Viewport === -->
+  <div class="canvas-viewport" id="canvas-viewport">
+    <div id="canvas-wrapper">
+      <canvas id="mangaCanvas" width="960" height="720"></canvas>
+    </div>
+  </div>
+
+  <!-- === Page Type Selector === -->
+  <div id="page-type-selector" class="panel page-type-panel">
+    <div class="area-header">Page Type</div>
+    <select id="pageTypeDropdown">
+      <optgroup label="Instagram">
+        <option value="1080x1080">Square (1080×1080)</option>
+        <option value="1080x1920">Story (1080×1920)</option>
+      </optgroup>
+      <optgroup label="Facebook">
+        <option value="1200x628">Link Post (1200×628)</option>
+        <option value="1080x1350">Portrait (1080×1350)</option>
+      </optgroup>
+      <optgroup label="Custom">
+        <option value="960x720">Default (960×720)</option>
+        <option value="1280x720">HD (1280×720)</option>
+      </optgroup>
+    </select>
   </div>
 </section>

@@ -1,25 +1,25 @@
 // public/js/app.js
 
-// 🧠 AI Modules
-// import { initModel } from './ai/model.js';
-// import { initPromptAI } from './ai/prompt.js';
-
-
-// 🎛️ Control Panels
-// import { initAIPanel } from './controls/ai-panel.js';
-// import { initAPIPanel } from './controls/api-panel.js';
-// import { initPromptPanel } from './controls/prompt.js';
-
 // 🎨 Core Canvas
 import { initCanvas } from './core/canvas.js';
 import { initLayers } from './core/layers.js';
 
-// 📚 Sidebar Features
-import { initBubble } from './sidebar/bubble.js';
-import { initControlSidebar } from './sidebar/control.js';
-import { initEffect } from './sidebar/effect.js';
-import { initText } from './sidebar/text.js';
-import { initTone } from './sidebar/tone.js';
+// 📚 Feature Panels
+import { initBubble } from './features/bubble.js';
+import { initControlSidebar } from './features/control.js';
+import { initEffect } from './features/effect.js';
+import { initText } from './features/text.js';
+import { initTone } from './features/tone.js';
+
+// 🧠 AI Modules (optional)
+const enableAI = false;
+if (enableAI) {
+  import('./ai/model.js').then(({ initModel }) => initModel());
+  import('./ai/prompt.js').then(({ initPromptAI }) => initPromptAI());
+  import('./controls/ai-panel.js').then(({ initAIPanel }) => initAIPanel());
+  import('./controls/api-panel.js').then(({ initAPIPanel }) => initAPIPanel());
+  import('./controls/prompt.js').then(({ initPromptPanel }) => initPromptPanel());
+}
 
 // 🖼️ UI Elements
 import { showToast } from './ui/toast.js';
@@ -27,27 +27,15 @@ import { initUI } from './ui/ui-init.js';
 
 function initApp() {
   try {
-    // Initialize AI
-    // initModel();
-    // initPromptAI();
-
-    // Initialize Controls
-    // initAIPanel();
-    // initAPIPanel();
-    // initPromptPanel();
-
-    // Initialize Canvas Core
     initCanvas();
     initLayers();
 
-    // Initialize Sidebar
     initBubble();
     initControlSidebar();
     initEffect();
     initText();
     initTone();
 
-    // Initialize UI
     showToast();
     initUI();
   } catch (e) {
