@@ -8,6 +8,7 @@ export function initUI() {
   initToastSystem();
   initDefaultPanel();
   initTopbarDropdowns();
+  initTopbarMobileToggle();
 }
 
 // === Theme Toggle ===
@@ -21,13 +22,13 @@ function initThemeToggle() {
 
 // === Panel Tab Switching ===
 function initPanelTabs() {
-  const panelTabs = document.querySelectorAll(".panel-tab");
-  const panelContents = document.querySelectorAll(".panel-content");
+  const tabs = document.querySelectorAll(".panel-tab");
+  const panels = document.querySelectorAll(".panel-content");
 
-  panelTabs.forEach(tab => {
+  tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       const targetId = tab.getAttribute("data-panel");
-      panelContents.forEach(panel => panel.classList.add("hidden"));
+      panels.forEach(panel => panel.classList.add("hidden"));
       document.getElementById(targetId)?.classList.remove("hidden");
     });
   });
@@ -36,9 +37,9 @@ function initPanelTabs() {
 // === Bottom Drawer Toggle ===
 function initBottomDrawer() {
   const drawer = document.getElementById("btm-drawer");
-  const drawerHandle = document.getElementById("btm-drawer-handle");
+  const handle = document.getElementById("btm-drawer-handle");
 
-  drawerHandle?.addEventListener("click", () => {
+  handle?.addEventListener("click", () => {
     drawer.classList.toggle("btm-closed");
     drawer.classList.toggle("btm-open");
   });
@@ -46,16 +47,16 @@ function initBottomDrawer() {
 
 // === Scroll Buttons ===
 function initScrollButtons() {
-  const scrollLeftBtn = document.getElementById("btm-scroll-left");
-  const scrollRightBtn = document.getElementById("btm-scroll-right");
-  const imageContainer = document.getElementById("btm-image-container");
+  const leftBtn = document.getElementById("btm-scroll-left");
+  const rightBtn = document.getElementById("btm-scroll-right");
+  const container = document.getElementById("btm-image-container");
 
-  scrollLeftBtn?.addEventListener("click", () => {
-    imageContainer.scrollBy({ left: -200, behavior: "smooth" });
+  leftBtn?.addEventListener("click", () => {
+    container.scrollBy({ left: -200, behavior: "smooth" });
   });
 
-  scrollRightBtn?.addEventListener("click", () => {
-    imageContainer.scrollBy({ left: 200, behavior: "smooth" });
+  rightBtn?.addEventListener("click", () => {
+    container.scrollBy({ left: 200, behavior: "smooth" });
   });
 }
 
@@ -81,22 +82,32 @@ function initDefaultPanel() {
 
 // === Topbar Dropdown Logic ===
 function initTopbarDropdowns() {
-  const menuButtons = document.querySelectorAll(".menu-button");
+  const buttons = document.querySelectorAll(".menu-button");
 
-  menuButtons.forEach(button => {
+  buttons.forEach(button => {
     button.addEventListener("click", e => {
       e.stopPropagation();
-      const parentItem = button.closest(".menu-item");
-      const isOpen = parentItem.classList.contains("open");
+      const item = button.closest(".menu-item");
+      const isOpen = item.classList.contains("open");
 
-      document.querySelectorAll(".menu-item.open").forEach(item => item.classList.remove("open"));
-      if (!isOpen) parentItem.classList.add("open");
+      document.querySelectorAll(".menu-item.open").forEach(i => i.classList.remove("open"));
+      if (!isOpen) item.classList.add("open");
     });
   });
 
   document.addEventListener("click", e => {
     if (!e.target.closest(".menu-item")) {
-      document.querySelectorAll(".menu-item.open").forEach(item => item.classList.remove("open"));
+      document.querySelectorAll(".menu-item.open").forEach(i => i.classList.remove("open"));
     }
+  });
+}
+
+// === Mobile Topbar Toggle ===
+function initTopbarMobileToggle() {
+  const toggleBtn = document.getElementById("topbarToggleBtn");
+  const menuWrapper = document.getElementById("topbarMenuWrapper");
+
+  toggleBtn?.addEventListener("click", () => {
+    menuWrapper?.classList.toggle("open");
   });
 }

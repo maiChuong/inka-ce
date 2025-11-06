@@ -1,10 +1,18 @@
 <!-- Top Menu Bar -->
 <nav class="topbar">
   <div class="topbar-icon">
-    <img src="public/images/inka-icon.png" alt="Inka-CE Icon" />
+    <img src="/public/images/inka-icon.png" alt="Inka-CE Icon" />
   </div>
-  <div class="topbar-scroll">
+
+  <!-- Mobile Menu Toggle Button -->
+  <button class="topbar-toggle" id="topbarToggleBtn" aria-label="Toggle Menu">
+    ☰
+  </button>
+
+  <!-- Menu Wrapper (visible on desktop, toggled on mobile) -->
+  <div class="topbar-menu-wrapper" id="topbarMenuWrapper">
     <ul class="topbar-menu">
+      <!-- File -->
       <li class="menu-item">
         <button class="menu-button">File</button>
         <ul class="dropdown">
@@ -14,6 +22,8 @@
           <li><button>Open Project</button></li>
         </ul>
       </li>
+
+      <!-- Edit -->
       <li class="menu-item">
         <button class="menu-button">Edit</button>
         <ul class="dropdown">
@@ -22,6 +32,8 @@
           <li><button>Clear Canvas</button></li>
         </ul>
       </li>
+
+      <!-- View -->
       <li class="menu-item">
         <button class="menu-button">View</button>
         <ul class="dropdown">
@@ -29,6 +41,8 @@
           <li><button id="toggleLayersBtn">Toggle Layers</button></li>
         </ul>
       </li>
+
+      <!-- Insert -->
       <li class="menu-item">
         <button class="menu-button">Insert</button>
         <ul class="dropdown">
@@ -37,6 +51,8 @@
           <li><button>Add Image</button></li>
         </ul>
       </li>
+
+      <!-- Tools -->
       <li class="menu-item">
         <button class="menu-button">Tools</button>
         <ul class="dropdown">
@@ -45,6 +61,8 @@
           <li><button>Crop</button></li>
         </ul>
       </li>
+
+      <!-- Help -->
       <li class="menu-item">
         <button class="menu-button">Help</button>
         <ul class="dropdown">
